@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.main.MainFragment">
+<!--We Will extract this out into it's own fragment soon
+in order to reuse it in A LOT of places...-->
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="match_parent"
+        android:id="@+id/top_GuideLine"
+        app:layout_constraintGuide_begin="@dimen/app_padding_or_margin"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="match_parent"
+        android:id="@+id/bottom_GuideLine"
+        app:layout_constraintGuide_end="@dimen/app_padding_or_margin"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="match_parent"
+        android:id="@+id/start_GuideLine"
+        app:layout_constraintGuide_begin="@dimen/app_padding_or_margin"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+    />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="match_parent"
+        android:id="@+id/end_GuideLine"
+        app:layout_constraintGuide_end="@dimen/app_padding_or_margin"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="match_parent"
+        android:id="@+id/vertical_center_GuideLine"
+        app:layout_constraintGuide_percent=".5"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/horizontal_center_GuideLine"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="1"
+        android:orientation="horizontal"
+        android:visibility="visible"
+        app:layout_constraintGuide_percent=".5" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="match_parent"
+        android:id="@+id/horizontal_quarter_GuideLine"
+        app:layout_constraintGuide_percent=".25"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="match_parent"
+        android:id="@+id/horizontal_second_quarter_GuideLine"
+        app:layout_constraintGuide_percent=".75"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        />
+
+<!--   TODO: Extract me Please! -->
+
+    <TextView
+        android:id="@+id/message"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:text="MainFragment Of Stuff"
+        app:layout_constraintStart_toEndOf="@id/horizontal_center_GuideLine"
+        app:layout_constraintTop_toBottomOf="@id/vertical_center_GuideLine"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
