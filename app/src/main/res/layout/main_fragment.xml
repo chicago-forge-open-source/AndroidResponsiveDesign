@@ -8,80 +8,124 @@
     tools:context=".ui.main.MainFragment">
 <!--We Will extract this out into it's own fragment soon
 in order to reuse it in A LOT of places...-->
+<!--    TIL: Putting the orientation value into the style causes the preview to break
+           Potentially causes runtime issues as well
+
+-->
     <androidx.constraintlayout.widget.Guideline
-        android:layout_width="match_parent"
         android:id="@+id/top_GuideLine"
-        app:layout_constraintGuide_begin="@dimen/app_padding_or_margin"
-        android:layout_height="match_parent"
+        style="@style/Guideline"
         android:orientation="horizontal"
+        app:layout_constraintGuide_begin="@dimen/app_padding_or_margin"
         />
 
     <androidx.constraintlayout.widget.Guideline
-        android:layout_width="match_parent"
+        style="@style/Guideline"
         android:id="@+id/bottom_GuideLine"
         app:layout_constraintGuide_end="@dimen/app_padding_or_margin"
-        android:layout_height="match_parent"
         android:orientation="horizontal"
         />
 
     <androidx.constraintlayout.widget.Guideline
-        android:layout_width="match_parent"
+        style="@style/Guideline"
         android:id="@+id/start_GuideLine"
         app:layout_constraintGuide_begin="@dimen/app_padding_or_margin"
-        android:layout_height="match_parent"
         android:orientation="vertical"
     />
 
     <androidx.constraintlayout.widget.Guideline
-        android:layout_width="match_parent"
+        style="@style/Guideline"
         android:id="@+id/end_GuideLine"
         app:layout_constraintGuide_end="@dimen/app_padding_or_margin"
-        android:layout_height="match_parent"
         android:orientation="vertical"
         />
 
     <androidx.constraintlayout.widget.Guideline
-        android:layout_width="match_parent"
+        style="@style/Guideline"
         android:id="@+id/vertical_center_GuideLine"
-        app:layout_constraintGuide_percent=".5"
-        android:layout_height="match_parent"
+        app:layout_constraintGuide_percent="0.5"
         android:orientation="vertical"
         />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/horizontal_center_GuideLine"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:alpha="1"
-        android:orientation="horizontal"
-        android:visibility="visible"
-        app:layout_constraintGuide_percent=".5" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:layout_width="match_parent"
-        android:id="@+id/horizontal_quarter_GuideLine"
-        app:layout_constraintGuide_percent=".25"
-        android:layout_height="match_parent"
+        style="@style/Guideline"
+        app:layout_constraintGuide_percent="0.5"
         android:orientation="horizontal"
         />
 
     <androidx.constraintlayout.widget.Guideline
-        android:layout_width="match_parent"
+        android:id="@+id/horizontal_quarter_GuideLine"
+        style="@style/Guideline"
+        app:layout_constraintGuide_percent="0.25"
+        android:orientation="horizontal"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
         android:id="@+id/horizontal_second_quarter_GuideLine"
-        app:layout_constraintGuide_percent=".75"
-        android:layout_height="match_parent"
+        style="@style/Guideline"
+        app:layout_constraintGuide_percent="0.75"
         android:orientation="horizontal"
         />
 
 <!--   TODO: Extract me Please! -->
 
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toEndOf="@id/vertical_center_GuideLine"
+        app:layout_constraintEnd_toStartOf="@id/end_GuideLine"
+        app:layout_constraintTop_toBottomOf="@id/top_GuideLine"
+        app:layout_constraintBottom_toTopOf="@id/bottom_GuideLine"
+        >
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="@string/button"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="@string/button"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="@string/button"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="@string/button"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="@string/button"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="@string/button"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="@string/button"/>
+    </LinearLayout>
+
     <TextView
         android:id="@+id/message"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="20dp"
+        android:layout_weight="1"
+        android:gravity="center"
         android:text="MainFragment Of Stuff"
-        app:layout_constraintStart_toEndOf="@id/horizontal_center_GuideLine"
-        app:layout_constraintTop_toBottomOf="@id/vertical_center_GuideLine"
+        android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@id/top_GuideLine"
         />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
