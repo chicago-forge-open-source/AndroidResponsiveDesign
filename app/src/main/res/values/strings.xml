@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Responsive Design Principles</string>
     <string name="button">Button</string>
-    <string name="main_label">Main</string>
+    <string name="main_label">Right Aligned</string>
     <string name="centered_label">Centered</string>
     <string name="left_aligned_label">Left Aligned</string>
 </resources>

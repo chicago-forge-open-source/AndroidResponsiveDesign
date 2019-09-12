@@ -7,72 +7,7 @@
     android:layout_height="match_parent"
     tools:context=".ui.main.MainFragment">
 
-    <!--    TOP/BOTTOM/START/END -->
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/top_GuideLine"
-        style="@style/Guideline"
-        android:orientation="horizontal"
-        android:visibility="visible"
-        app:layout_constraintGuide_begin="@dimen/app_padding_or_margin" />
-
-    <androidx.constraintlayout.widget.Guideline
-        style="@style/Guideline"
-        android:id="@+id/bottom_GuideLine"
-        app:layout_constraintGuide_end="@dimen/app_padding_or_margin"
-        android:orientation="horizontal" />
-
-    <androidx.constraintlayout.widget.Guideline
-        style="@style/Guideline"
-        android:id="@+id/start_GuideLine"
-        app:layout_constraintGuide_begin="@dimen/app_padding_or_margin"
-        android:orientation="vertical" />
-
-    <androidx.constraintlayout.widget.Guideline
-        style="@style/Guideline"
-        android:id="@+id/end_GuideLine"
-        app:layout_constraintGuide_end="@dimen/app_padding_or_margin"
-        android:orientation="vertical" />
-    <!--  TOP/BOTTOM/START/END -->
-
-    <!--  Horizontal QUARTERS -->
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/horizontal_center_GuideLine"
-        style="@style/Guideline"
-        app:layout_constraintGuide_percent="0.5"
-        android:orientation="horizontal" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/horizontal_quarter_GuideLine"
-        style="@style/Guideline"
-        app:layout_constraintGuide_percent="0.25"
-        android:orientation="horizontal" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/horizontal_second_quarter_GuideLine"
-        style="@style/Guideline"
-        app:layout_constraintGuide_percent="0.75"
-        android:orientation="horizontal" />
-    <!--  Horizontal QUARTERS -->
-
-    <!--    Vertical QUARTERS-->
-    <androidx.constraintlayout.widget.Guideline
-        style="@style/Guideline"
-        android:id="@+id/vertical_center_GuideLine"
-        app:layout_constraintGuide_percent="0.5"
-        android:orientation="vertical" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/vertical_quarter_GuideLine"
-        style="@style/Guideline"
-        app:layout_constraintGuide_percent="0.25"
-        android:orientation="vertical" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/vertical_second_quarter_GuideLine"
-        style="@style/Guideline"
-        app:layout_constraintGuide_percent="0.75"
-        android:orientation="vertical" />
-    <!--    Vertical QUARTERS-->
+    <include layout="@layout/constraint_guidelines" />
 
     <LinearLayout
         android:layout_width="0dp"
@@ -83,6 +18,16 @@
         app:layout_constraintTop_toBottomOf="@id/top_GuideLine"
         app:layout_constraintBottom_toTopOf="@id/bottom_GuideLine"
         >
+        <TextView
+            android:id="@+id/message"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="@dimen/text_box_weight"
+            android:gravity="center"
+            android:text="Centered Of Stuff"
+            android:textAlignment="center"
+            app:layout_constraintTop_toBottomOf="@id/top_GuideLine"
+            />
         <Button
             android:layout_width="match_parent"
             android:layout_height="0dp"
@@ -119,16 +64,5 @@
             android:layout_weight="1"
             android:text="@string/button"/>
     </LinearLayout>
-
-    <TextView
-        android:id="@+id/message"
-        android:layout_width="match_parent"
-        android:layout_height="20dp"
-        android:layout_weight="1"
-        android:gravity="center"
-        android:text="MainFragment Of Stuff"
-        android:textAlignment="center"
-        app:layout_constraintTop_toBottomOf="@id/top_GuideLine"
-        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
