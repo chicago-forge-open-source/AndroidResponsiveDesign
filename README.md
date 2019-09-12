@@ -34,4 +34,9 @@
         
 ### STEP 3
     We aim to show how we can size and position various items throughout our UI using our constrainsts
-    to guarantee that sizing and positioning is consistent with any number of items on our display 
+    to guarantee that sizing and positioning is consistent with any number of items on our display.
+    
+    We added a TabLayout with some tabs to allow us to switch between the different fragments. 
+    
+    Our original fragment, and now the added centered fragment. Since we didnt' want to use a ViewPager
+    we implemented our tabs with a frame layout. And added a listener for tab button updates.

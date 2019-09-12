@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<merge xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ui.main.MainFragment">
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    tools:showIn="@layout/main_fragment"
+    tools:context=".MainActivity"
+    >
 
     <!--    TOP/BOTTOM/START/END -->
     <androidx.constraintlayout.widget.Guideline
@@ -74,61 +73,5 @@
         android:orientation="vertical" />
     <!--    Vertical QUARTERS-->
 
-    <LinearLayout
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:orientation="vertical"
-        app:layout_constraintStart_toEndOf="@id/vertical_center_GuideLine"
-        app:layout_constraintEnd_toStartOf="@id/end_GuideLine"
-        app:layout_constraintTop_toBottomOf="@id/top_GuideLine"
-        app:layout_constraintBottom_toTopOf="@id/bottom_GuideLine"
-        >
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:text="@string/button"/>
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:text="@string/button"/>
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:text="@string/button"/>
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:text="@string/button"/>
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:text="@string/button"/>
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:text="@string/button"/>
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:text="@string/button"/>
-    </LinearLayout>
 
-    <TextView
-        android:id="@+id/message"
-        android:layout_width="match_parent"
-        android:layout_height="20dp"
-        android:layout_weight="1"
-        android:gravity="center"
-        android:text="MainFragment Of Stuff"
-        android:textAlignment="center"
-        app:layout_constraintTop_toBottomOf="@id/top_GuideLine"
-        />
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</merge>
