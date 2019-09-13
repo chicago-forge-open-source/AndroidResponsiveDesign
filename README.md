@@ -40,3 +40,7 @@
     
     Our original fragment, and now the added centered fragment. Since we didnt' want to use a ViewPager
     we implemented our tabs with a frame layout. And added a listener for tab button updates.
+    
+### STEP 4
+    We did some small changes to update main app theme to use latest Material Design, and updated
+    a few of the dependencies.
