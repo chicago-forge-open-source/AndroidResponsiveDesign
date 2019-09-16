@@ -9,12 +9,14 @@ import com.google.android.material.tabs.TabLayout.OnTabSelectedListener
 import kotlinx.android.synthetic.main.main_activity.*
 import androidx.fragment.app.Fragment
 import com.example.responsivedesignprinciples.ui.main.LeftAlignedFragment
+import com.example.responsivedesignprinciples.ui.main.MultiConstraintFragment
 
 
 class MainActivity : AppCompatActivity(), OnTabSelectedListener {
     private val fragmentOne = MainFragment.newInstance()
     private val fragmentTwo = CenteredFragment.newInstance()
     private val fragmentThree = LeftAlignedFragment.newInstance()
+    private val fragmentFour = MultiConstraintFragment.newInstance()
 
     override fun onTabReselected(p0: TabLayout.Tab?) {
         println("p0 = $p0")
@@ -48,6 +50,7 @@ class MainActivity : AppCompatActivity(), OnTabSelectedListener {
             0 -> replaceFragment(fragmentOne)
             1 -> replaceFragment(fragmentTwo)
             2 -> replaceFragment(fragmentThree)
+            3 -> replaceFragment(fragmentFour)
         }
     }
 

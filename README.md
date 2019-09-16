@@ -44,3 +44,11 @@
 ### STEP 4
     We did some small changes to update main app theme to use latest Material Design, and updated
     a few of the dependencies.
+    
+    And also will add our first "complex" example to build on what we have learned so far. 
+    
+    This view has monkey images of varied sizes being displayed and sized by the contrainsts layout
+    
+### STEP 5
+    We will build upon step 4 example to start creating some clean looking UI's. Note we expect some
+    gotchas when we try to add the same guidelines multiple times... But that's okay
