@@ -2,4 +2,5 @@
 <resources>
     <dimen name="app_padding_or_margin">15dp</dimen>
     <dimen name="text_box_weight">.5</dimen>
+
 </resources>

@@ -5,4 +5,5 @@
     <string name="centered_label">Centered</string>
     <string name="left_aligned_label">Left Aligned</string>
     <string name="multi_constraint_label">Multi-Constraints</string>
+    <string name="settings">Settings</string>
 </resources>

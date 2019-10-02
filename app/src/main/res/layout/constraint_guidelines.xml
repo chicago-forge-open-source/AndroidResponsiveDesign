@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merge xmlns:tools="http://schemas.android.com/tools"
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    tools:showIn="@layout/main_fragment"
-    tools:context=".MainActivity"
-    >
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainFragment"
+    tools:showIn="@layout/left_aligned_fragment">
 
     <!--    TOP/BOTTOM/START/END -->
     <androidx.constraintlayout.widget.Guideline
@@ -15,10 +14,10 @@
         app:layout_constraintGuide_begin="@dimen/app_padding_or_margin" />
 
     <androidx.constraintlayout.widget.Guideline
-        style="@style/Guideline"
         android:id="@+id/bottom_GuideLine"
-        app:layout_constraintGuide_end="@dimen/app_padding_or_margin"
-        android:orientation="horizontal" />
+        style="@style/Guideline"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="@dimen/app_padding_or_margin" />
 
     <androidx.constraintlayout.widget.Guideline
         style="@style/Guideline"
@@ -27,50 +26,50 @@
         android:orientation="vertical" />
 
     <androidx.constraintlayout.widget.Guideline
-        style="@style/Guideline"
         android:id="@+id/end_GuideLine"
-        app:layout_constraintGuide_end="@dimen/app_padding_or_margin"
-        android:orientation="vertical" />
+        style="@style/Guideline"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="@dimen/app_padding_or_margin" />
     <!--  TOP/BOTTOM/START/END -->
 
     <!--  Horizontal QUARTERS -->
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/horizontal_center_GuideLine"
         style="@style/Guideline"
-        app:layout_constraintGuide_percent="0.5"
-        android:orientation="horizontal" />
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/horizontal_quarter_GuideLine"
         style="@style/Guideline"
-        app:layout_constraintGuide_percent="0.25"
-        android:orientation="horizontal" />
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.25" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/horizontal_second_quarter_GuideLine"
         style="@style/Guideline"
-        app:layout_constraintGuide_percent="0.75"
-        android:orientation="horizontal" />
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.75" />
     <!--  Horizontal QUARTERS -->
 
     <!--    Vertical QUARTERS-->
     <androidx.constraintlayout.widget.Guideline
-        style="@style/Guideline"
         android:id="@+id/vertical_center_GuideLine"
-        app:layout_constraintGuide_percent="0.5"
-        android:orientation="vertical" />
+        style="@style/Guideline"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/vertical_quarter_GuideLine"
         style="@style/Guideline"
-        app:layout_constraintGuide_percent="0.25"
-        android:orientation="vertical" />
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.25" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/vertical_second_quarter_GuideLine"
         style="@style/Guideline"
-        app:layout_constraintGuide_percent="0.75"
-        android:orientation="vertical" />
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.75" />
     <!--    Vertical QUARTERS-->
 
 

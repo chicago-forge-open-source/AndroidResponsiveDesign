@@ -40,8 +40,9 @@ class MainActivity : AppCompatActivity(), OnTabSelectedListener {
         tabs.addOnTabSelectedListener(this)
         if (savedInstanceState == null) {
             supportFragmentManager.beginTransaction()
-                    .replace(R.id.container, MainFragment.newInstance())
+                    .replace(R.id.container, MultiConstraintFragment.newInstance())
                     .commitNow()
+            tabs.selectTab(tabs.getTabAt(3), true)
         }
     }
 

@@ -6,20 +6,35 @@
 
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <LinearLayout
+    <FrameLayout
+        android:id="@+id/container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        tools:context=".MainActivity"
+        android:nestedScrollingEnabled="true"
+        />
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:orientation="vertical">-->
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appbar"
         android:layout_height="wrap_content"
         android:layout_width="match_parent">
-
-        <androidx.appcompat.widget.Toolbar
-            android:layout_height="?attr/actionBarSize"
+        <com.google.android.material.appbar.CollapsingToolbarLayout
             android:layout_width="match_parent"
-            app:layout_scrollFlags="scroll|enterAlways">
+            android:layout_height="match_parent"
+            app:contentScrim="?attr/colorPrimary"
+            app:expandedTitleGravity="top"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed|snap">
 
+            <androidx.appcompat.widget.Toolbar
+                android:layout_height="?attr/actionBarSize"
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                app:layout_scrollFlags="scroll|enterAlways"
+                app:layout_collapseMode="pin"/>
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tabs"
             android:layout_width="match_parent"
@@ -27,35 +42,36 @@
             app:tabMode="scrollable">
 
             <com.google.android.material.tabs.TabItem
+                android:id="@+id/right_tab"
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
                 android:text="@string/main_label" />
 
             <com.google.android.material.tabs.TabItem
+                android:id="@+id/center_tab"
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
                 android:text="@string/centered_label"
                 />
 
             <com.google.android.material.tabs.TabItem
+                android:id="@+id/left_aligned_tab"
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
                 android:text="@string/left_aligned_label" />
 
             <com.google.android.material.tabs.TabItem
+                android:id="@+id/multi_tab"
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
-                android:text="@string/multi_constraint_label" />
+                android:text="@string/multi_constraint_label"
+                />
         </com.google.android.material.tabs.TabLayout>
-        </androidx.appcompat.widget.Toolbar>
+
+
     </com.google.android.material.appbar.AppBarLayout>
 
-    <FrameLayout
-        android:id="@+id/container"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".MainActivity"
-        />
-    </LinearLayout>
+
+<!--    </LinearLayout>-->
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
